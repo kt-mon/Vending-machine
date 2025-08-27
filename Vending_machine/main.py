@@ -1,4 +1,5 @@
-import tkinter as tk
+import random
+
 checks = "y"
 total_price = 0
 
@@ -117,3 +118,23 @@ elif member == "n":
                 break
             elif pay < total_price:
                 print("กรุณาใส่จำนวนให้ครบ")
+
+print("---------------------")
+
+game_check = str(input("ต้องการเล่นเกมหรือไม่(y/n) : "))
+if game_check == "y":
+    print("เกมทายตัวเลข 1-10")
+    number = random.randint(1,10)
+    guess = -1
+    count = 0
+    while guess != number:
+        guess = int(input("ทายตัวเลข 1-10 : "))
+        count += 1
+        if guess > number:
+            print("มากไป")
+        elif guess < number:
+            print("น้อยไป")
+
+    print("----------------------")
+    print(f"ถูกต้องคร้าบ คำตอบคือ {number}")
+    print(f"คุณใช้ไปทั้งหมด {count} รอบ")
