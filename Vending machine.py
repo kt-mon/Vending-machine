@@ -72,6 +72,13 @@ elif member == "n":
         if pay >= total_price:
             print(f"รับเงินจากคุณมา {pay} บาท")
             print(f"ทอนเงินทั้งหมด {change} บาท")
-            print(f"ขอบคุณที่ใช้บริการ")
         elif pay < total_price:
             print("กรุณาใส่จำนวนให้ครบ")
+
+bill = str(input("รับใบเสร็จมั้ย(y/n) : "))
+if bill == "y":
+    print("สั่งซื้อสำเร็จ")
+    print(f"ยอดสินค้า {total_price} บาท")
+    print(f"คุณจ่าย {pay} บาท")
+    print(f"ทอนเงิน {change} บาท")
+    print("ขอบคุณที่ใช้บริการ")
