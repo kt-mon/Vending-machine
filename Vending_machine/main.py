@@ -1,3 +1,4 @@
+import tkinter as tk
 checks = "y"
 total_price = 0
 
